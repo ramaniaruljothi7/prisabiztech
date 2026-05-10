@@ -368,8 +368,9 @@ h3 {
 }
 
 .big-service {
+  overflow: hidden;
   min-height: 235px;
-  padding: 28px;
+  padding: 0 24px 26px;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
@@ -381,34 +382,12 @@ h3 {
   box-shadow: 0 28px 80px rgba(7, 27, 47, 0.16);
 }
 
-.service-symbol {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 22px;
-  color: var(--white);
-  background: var(--navy);
-  border-radius: var(--radius);
-  font-weight: 900;
-}
-
-.service-symbol svg {
-  width: 25px;
-  height: 25px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.big-service:nth-child(2n) .service-symbol {
-  background: var(--teal);
-}
-
-.big-service:nth-child(3n) .service-symbol {
-  background: var(--gold);
+.service-photo {
+  width: calc(100% + 48px);
+  height: 118px;
+  margin: 0 -24px 24px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
 }
 
 .proof {
