@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="640" viewBox="0 0 1800 640" role="img" aria-labelledby="title desc">
+  <title id="title">PrisaBizTech premium horizontal logo</title>
+  <desc id="desc">A professional geometric prism mark with the PrisaBizTech wordmark.</desc>
+  <defs>
+    <linearGradient id="prismA" x1="120" y1="130" x2="455" y2="495" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#18B7A0"/>
+      <stop offset="0.52" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0B1F3A"/>
+    </linearGradient>
+    <linearGradient id="prismB" x1="182" y1="110" x2="394" y2="445" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5EEAD4"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="prismC" x1="265" y1="170" x2="505" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1800" height="640" fill="#FFFFFF"/>
+
+  <g transform="translate(122 82)">
+    <path d="M233.2 18 38 126.1v224.1L233.2 458l195.1-107.8V126.1L233.2 18Z" fill="#F8FAFC"/>
+    <path d="M233.2 18 38 126.1l195.2 112.3 195.1-112.3L233.2 18Z" fill="url(#prismB)"/>
+    <path d="M38 126.1v224.1L233.2 458V238.4L38 126.1Z" fill="url(#prismA)"/>
+    <path d="M428.3 126.1v224.1L233.2 458V238.4l195.1-112.3Z" fill="url(#prismC)"/>
+    <path d="M233.2 96.8 107.6 166.4l125.6 72 125.6-72-125.6-69.6Z" fill="#FFFFFF" opacity=".92"/>
+    <path d="M121.8 219.7v83.1l72.1 39.9v-82.9l-72.1-40.1Z" fill="#FFFFFF" opacity=".2"/>
+    <path d="M344.6 219.7v83.1l-72 39.9v-82.9l72-40.1Z" fill="#FFFFFF" opacity=".18"/>
+    <path d="M233.2 18 38 126.1v224.1L233.2 458l195.1-107.8V126.1L233.2 18Z" fill="none" stroke="#0B1F3A" stroke-opacity=".08" stroke-width="10" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(640 214)">
+    <text x="0" y="0" fill="#0B1F3A" font-family="Inter, Avenir Next, Segoe UI, Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="0">Prisa</text>
+    <text x="310" y="0" fill="#118C82" font-family="Inter, Avenir Next, Segoe UI, Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="0">Biz</text>
+    <text x="496" y="0" fill="#2563EB" font-family="Inter, Avenir Next, Segoe UI, Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="0">Tech</text>
+    <rect x="6" y="44" width="718" height="8" rx="4" fill="#E2E8F0"/>
+    <rect x="6" y="44" width="322" height="8" rx="4" fill="#18B7A0"/>
+    <text x="4" y="112" fill="#516174" font-family="Inter, Avenir Next, Segoe UI, Arial, sans-serif" font-size="31" font-weight="600" letter-spacing="7">BUSINESS TECHNOLOGY SOLUTIONS</text>
+  </g>
+</svg>

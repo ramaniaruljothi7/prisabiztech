@@ -72,8 +72,10 @@ img {
 }
 
 .brand img {
-  width: clamp(166px, 18vw, 238px);
+  width: clamp(178px, 19vw, 260px);
+  max-height: 58px;
   height: auto;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -419,13 +421,12 @@ h3 {
 }
 
 .faculty-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  display: block;
 }
 
 .faculty-images img {
   width: 100%;
+  max-height: 620px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: top center;
@@ -433,8 +434,12 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.faculty-images img + img {
-  margin-top: 42px;
+.faculty-title {
+  margin: 16px 0 0;
+  color: var(--navy);
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-weight: 900;
+  text-align: center;
 }
 
 .check-list {
@@ -575,12 +580,11 @@ textarea {
 }
 
 .site-footer img {
-  width: 210px;
+  width: 240px;
   max-width: 100%;
+  max-height: 72px;
   margin-bottom: 10px;
-  padding: 8px;
-  border-radius: var(--radius);
-  background: var(--white);
+  object-fit: contain;
 }
 
 .site-footer span {
@@ -716,11 +720,4 @@ textarea {
     flex-direction: column;
   }
 
-  .faculty-images {
-    grid-template-columns: 1fr;
-  }
-
-  .faculty-images img + img {
-    margin-top: 0;
-  }
 }

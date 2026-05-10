@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-labelledby="title desc">
+  <title id="title">PrisaBizTech premium emblem logo</title>
+  <desc id="desc">A polished monogram emblem for PrisaBizTech.</desc>
+  <defs>
+    <linearGradient id="edge" x1="360" y1="230" x2="1220" y2="1130" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8A6"/>
+      <stop offset=".45" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0B1F3A"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="512" y1="390" x2="1035" y2="980" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E0F7F4"/>
+      <stop offset=".65" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DBEAFE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1600" fill="#FFFFFF"/>
+
+  <g transform="translate(0 12)">
+    <path d="M800 170 1260 435v530L800 1230 340 965V435L800 170Z" fill="url(#edge)"/>
+    <path d="M800 282 1163 491.5v419L800 1120 437 910.5v-419L800 282Z" fill="#FFFFFF" opacity=".94"/>
+    <path d="M800 342 1112 522v360L800 1062 488 882V522L800 342Z" fill="url(#inner)"/>
+    <path d="M615 515h236c94 0 159 56 159 138 0 51-25 92-66 115 55 23 88 72 88 134 0 91-70 151-176 151H615V515Zm109 92v121h113c40 0 66-24 66-61 0-36-26-60-66-60H724Zm0 207v146h127c45 0 73-29 73-73 0-44-28-73-73-73H724Z" fill="#0B1F3A"/>
+    <path d="M566 515h168c88 0 150 58 150 143 0 83-62 141-150 141h-59v254H566V515Zm109 92v100h52c30 0 50-20 50-50 0-31-20-50-50-50h-52Z" fill="#118C82"/>
+    <path d="M1003 515h-155v-92h421v92h-156v538h-110V515Z" fill="#2563EB" opacity=".92"/>
+    <path d="M800 170 1260 435v530L800 1230 340 965V435L800 170Z" fill="none" stroke="#0B1F3A" stroke-opacity=".08" stroke-width="20" stroke-linejoin="round"/>
+  </g>
+
+  <text x="800" y="1388" text-anchor="middle" fill="#0B1F3A" font-family="Inter, Avenir Next, Segoe UI, Arial, sans-serif" font-size="116" font-weight="800" letter-spacing="0">PrisaBizTech</text>
+  <text x="800" y="1450" text-anchor="middle" fill="#5B6B7C" font-family="Inter, Avenir Next, Segoe UI, Arial, sans-serif" font-size="33" font-weight="600" letter-spacing="7">BUSINESS TECHNOLOGY SOLUTIONS</text>
+</svg>
