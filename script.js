@@ -3,7 +3,152 @@ const nav = document.querySelector("[data-nav]");
 const header = document.querySelector("[data-header]");
 const form = document.querySelector("[data-contact-form]");
 const formNote = document.querySelector("[data-form-note]");
-const revealItems = document.querySelectorAll(".reveal");
+const gallery = document.querySelector("[data-gallery]");
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxCaption = document.querySelector("[data-lightbox-caption]");
+const lightboxClose = document.querySelector("[data-lightbox-close]");
+let revealItems = document.querySelectorAll(".reveal");
+
+const galleryImages = [
+  ["image1.png", "Healthcare client association"],
+  ["image2.png", "Commercial client association"],
+  ["image3.png", "Technology and commercial client"],
+  ["image4.jpeg", "Partnership document"],
+  ["image5.jpeg", "Institution program banner"],
+  ["image6.jpeg", "Award and recognition event"],
+  ["image7.jpeg", "Recognition ceremony"],
+  ["image8.jpeg", "Event stage recognition"],
+  ["image9.jpeg", "Speaker recognition"],
+  ["image10.jpeg", "Tagore Institute event"],
+  ["image11.jpeg", "Classroom training session"],
+  ["image12.png", "Group program photograph"],
+  ["image13.png", "Institution group session"],
+  ["image14.png", "KSR College invitation"],
+  ["image15.png", "Student seminar session"],
+  ["image16.png", "Educational program gathering"],
+  ["image17.png", "Selvam College lecture series"],
+  ["image18.png", "International webinar poster"],
+  ["image19.png", "Paavai Engineering College program"],
+  ["image20.jpeg", "Guest lecture social update"],
+  ["image21.jpeg", "AVS College event invite"],
+  ["image22.jpeg", "Training collage"],
+  ["image23.png", "Sengunthar Engineering College program"],
+  ["image24.jpeg", "Career opportunities poster"],
+  ["image25.jpeg", "Event documentation collage"],
+  ["image26.png", "VET Institute expert talk"],
+  ["image27.jpeg", "Institution program update"],
+  ["image28.jpeg", "Vivekanandha College workshop"],
+  ["image29.jpeg", "Job opportunities webinar"],
+  ["image30.jpeg", "KSR College MOU program"],
+  ["image31.jpeg", "Guest lecture session"],
+  ["image32.jpeg", "AVS Engineering College partnership"],
+  ["image33.jpeg", "AVS Engineering College MOU"],
+  ["image34.png", "Paavai College guest program"],
+  ["image35.jpeg", "Healthcare training program"],
+  ["image36.jpeg", "Doctor training session"],
+  ["image37.jpeg", "Healthcare consultancy meeting"],
+  ["image38.jpeg", "Hospital training discussion"],
+  ["image39.jpeg", "Healthcare team development"],
+  ["image40.jpeg", "Award presentation"],
+  ["image41.jpeg", "Award news clipping"],
+  ["image42.jpeg", "Media coverage"],
+  ["image43.jpeg", "Academic event speech"],
+  ["image44.jpeg", "Classroom lecture"],
+  ["image45.jpeg", "Career guidance program"],
+  ["image46.jpeg", "Founder speaking at event"],
+  ["image47.png", "Vivekanandha College program poster"],
+  ["image48.jpeg", "Sengunthar College program update"],
+  ["image49.png", "Academic program collage"],
+  ["image50.jpeg", "Institution event collage"],
+  ["image51.png", "VET Institute testimonial letter"],
+  ["image52.jpeg", "Certificate and recognition collage"],
+  ["image53.jpeg", "MOU and career guidance update"]
+];
+
+const observeReveals = () => {
+  revealItems = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  }
+};
+
+const openLightbox = (image) => {
+  if (!lightbox || !lightboxImage || !lightboxCaption) {
+    return;
+  }
+
+  lightboxImage.src = image.dataset.fullSrc || image.currentSrc || image.src;
+  lightboxImage.alt = image.alt || "Expanded image preview";
+  lightboxCaption.textContent = image.alt || "";
+  lightbox.hidden = false;
+  document.body.style.overflow = "hidden";
+  lightboxClose?.focus();
+};
+
+const closeLightbox = () => {
+  if (!lightbox || !lightboxImage) {
+    return;
+  }
+
+  lightbox.hidden = true;
+  lightboxImage.src = "";
+  document.body.style.overflow = "";
+};
+
+const enableImagePreview = () => {
+  const previewImages = document.querySelectorAll(".logo-grid img, .gallery-item img, .event-card img");
+
+  previewImages.forEach((image) => {
+    image.setAttribute("tabindex", "0");
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `Expand image: ${image.alt}`);
+
+    image.addEventListener("click", () => openLightbox(image));
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox(image);
+      }
+    });
+  });
+};
+
+if (gallery) {
+  const fragment = document.createDocumentFragment();
+
+  galleryImages.forEach(([fileName, caption]) => {
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+    const figcaption = document.createElement("figcaption");
+
+    figure.className = "gallery-item reveal";
+    image.src = `assets/document/${fileName}`;
+    image.alt = caption;
+    image.loading = "lazy";
+    figcaption.textContent = caption;
+
+    figure.append(image, figcaption);
+    fragment.append(figure);
+  });
+
+  gallery.append(fragment);
+}
 
 navToggle?.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("is-open");
@@ -23,27 +168,37 @@ const updateHeader = () => {
 
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
+observeReveals();
+enableImagePreview();
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
+lightboxClose?.addEventListener("click", closeLightbox);
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
+});
 
-  revealItems.forEach((item) => observer.observe(item));
-} else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
-}
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && lightbox && !lightbox.hidden) {
+    closeLightbox();
+  }
+});
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
-  formNote.textContent = "Thank you. Your free career discovery call request is ready to be connected to email or CRM.";
+
+  const formData = new FormData(form);
+  const name = formData.get("name");
+  const phone = formData.get("phone");
+  const email = formData.get("email");
+  const service = formData.get("service");
+  const message = formData.get("message");
+  const subject = encodeURIComponent(`Website enquiry - ${service}`);
+  const body = encodeURIComponent(
+    `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${service}\n\nMessage:\n${message}`
+  );
+
+  formNote.textContent = "Opening your email app with the enquiry details.";
+  window.location.href = `mailto:sathya@prisabiztech.com?subject=${subject}&body=${body}`;
   form.reset();
 });
