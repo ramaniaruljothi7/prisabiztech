@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 180" role="img" aria-labelledby="title">
+  <title id="title">Velavan Promoters</title>
+  <rect width="380" height="180" fill="#fff6bd"/>
+  <path d="M50 112h280" stroke="#b59a55" stroke-width="3"/>
+  <path d="M64 30c18 22 18 55 0 78-18-23-18-56 0-78z" fill="#d7a543"/>
+  <path d="M292 28h54v34h-54zM304 40h30" stroke="#e338a2" stroke-width="8" fill="none"/>
+  <text x="205" y="82" fill="#138208" font-family="Arial, sans-serif" font-size="56" font-weight="900" text-anchor="middle">VELAVAN</text>
+  <text x="205" y="132" fill="#d92191" font-family="Arial, sans-serif" font-size="38" font-weight="900" text-anchor="middle">PROMOTERS</text>
+</svg>

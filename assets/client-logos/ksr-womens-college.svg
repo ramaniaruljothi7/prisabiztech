@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 180" role="img" aria-labelledby="title">
+  <title id="title">KSR Women's College</title>
+  <rect width="260" height="180" fill="#ffffff"/>
+  <path d="M62 18h136l-15 18v96l15 18H62l15-18V36z" fill="#f7e5aa" stroke="#c68a2d" stroke-width="4"/>
+  <path d="M92 48h76v66H92z" fill="#31206b" stroke="#c68a2d" stroke-width="3"/>
+  <path d="M114 98l16-44 16 44z" fill="#ffffff"/>
+  <path d="M130 54v47" stroke="#f4a12c" stroke-width="6"/>
+  <text x="130" y="66" fill="#ffffff" font-family="Georgia, serif" font-size="24" font-weight="800" text-anchor="middle">KSR</text>
+  <text x="130" y="132" fill="#31206b" font-family="Arial, sans-serif" font-size="13" font-weight="800" text-anchor="middle">WOMEN'S COLLEGE</text>
+  <text x="130" y="154" fill="#31206b" font-family="Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">KNOWLEDGE  SUCCESS  RESPECT</text>
+</svg>

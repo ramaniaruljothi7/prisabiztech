@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title">
+  <title id="title">Rolex</title>
+  <rect width="320" height="180" fill="#ffffff"/>
+  <circle cx="160" cy="76" r="56" fill="#15203a"/>
+  <circle cx="160" cy="76" r="48" fill="none" stroke="#d9ad48" stroke-width="8"/>
+  <path d="M118 70h84v10h-84zM128 88h64v8h-64zM140 104h40v7h-40z" fill="#45b1c8"/>
+  <path d="M108 46h104l-16 18h-72z" fill="#d9ad48"/>
+  <text x="160" y="102" fill="#f3d484" font-family="Georgia, serif" font-size="54" font-weight="800" text-anchor="middle">ROLEX</text>
+  <text x="160" y="158" fill="#111111" font-family="Arial, sans-serif" font-size="28" font-weight="900" text-anchor="middle">PHASE - 2</text>
+</svg>

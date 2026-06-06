@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 180" role="img" aria-labelledby="title">
+  <title id="title">VIP Housing and Properties</title>
+  <rect width="460" height="180" fill="#11185a"/>
+  <path d="M42 32h105v92H42z" fill="#55b5a2"/>
+  <path d="M82 68h65v56H82z" fill="#11185a"/>
+  <path d="M147 68l32 22-32 22z" fill="#c99642"/>
+  <text x="246" y="92" fill="#55b5a2" font-family="Georgia, serif" font-size="82" font-weight="700">VIP</text>
+  <text x="230" y="150" fill="#ffffff" font-family="Georgia, serif" font-size="30" font-weight="700" text-anchor="middle">HOUSING AND PROPERTIES</text>
+</svg>

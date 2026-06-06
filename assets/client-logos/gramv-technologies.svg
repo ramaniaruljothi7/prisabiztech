@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 180" role="img" aria-labelledby="title">
+  <title id="title">Gramv Technologies</title>
+  <rect width="220" height="180" fill="#020202"/>
+  <path d="M64 35h92c-13 14-26 22-39 26H88c-8 0-15 7-15 17 0 16 13 26 32 26 17 0 32-9 40-24h-42l18-23h66c-1 54-37 86-83 86-39 0-69-27-69-64 0-25 11-43 29-44z" fill="#2fa54a"/>
+  <path d="M69 35h87c-15 17-31 27-50 30 23 1 42 7 57 17-11 32-34 55-68 57 24-9 38-25 44-47H96l22-30H67z" fill="#f7b43b" opacity=".95"/>
+  <text x="110" y="150" fill="#65bd43" font-family="Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle">Gramv</text>
+</svg>

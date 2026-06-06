@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 180" role="img" aria-labelledby="title">
+  <title id="title">Brain Battle SK Chess Foundation</title>
+  <rect width="380" height="180" fill="#ffffff"/>
+  <circle cx="58" cy="90" r="42" fill="#ffffff" stroke="#163d2c" stroke-width="3"/>
+  <circle cx="58" cy="90" r="25" fill="#f3f5e9"/>
+  <path d="M47 103h22l-7-18 6-8-10-8-10 8 6 8z" fill="#17365d"/>
+  <text x="58" y="132" fill="#1b7c3e" font-family="Arial, sans-serif" font-size="22" font-weight="900" text-anchor="middle">B B</text>
+  <text x="224" y="78" fill="#17365d" font-family="Georgia, serif" font-size="48" font-weight="900" text-anchor="middle">BRAIN BATTLE</text>
+  <rect x="112" y="88" width="234" height="34" fill="#17365d"/>
+  <text x="229" y="114" fill="#f8a51b" font-family="Arial, sans-serif" font-size="28" font-weight="900" text-anchor="middle">SK CHESS FOUNDATION</text>
+  <text x="229" y="148" fill="#17365d" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">Seeding to be Legends</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 180" role="img" aria-labelledby="title">
+  <title id="title">Vysya College</title>
+  <rect width="260" height="180" fill="#ffffff"/>
+  <path d="M130 14l80 37v79l-80 36-80-36V51z" fill="#f7e7b3" stroke="#141414" stroke-width="5"/>
+  <path d="M130 26l67 31v65l-67 30-67-30V57z" fill="#f7e7b3" stroke="#c83c35" stroke-width="4"/>
+  <circle cx="130" cy="90" r="45" fill="#f3e4a8" stroke="#111111" stroke-width="4"/>
+  <text x="130" y="61" fill="#111111" font-family="Arial, sans-serif" font-size="15" font-weight="900" text-anchor="middle">LET OUR LIFE SHINE</text>
+  <text x="130" y="134" fill="#111111" font-family="Arial, sans-serif" font-size="20" font-weight="900" text-anchor="middle">VYSYA COLLEGE</text>
+  <path d="M108 95h44v22h-44zM116 101h28" stroke="#53402a" stroke-width="3" fill="none"/>
+</svg>

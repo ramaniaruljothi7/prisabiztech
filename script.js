@@ -8,13 +8,13 @@ const lightbox = document.querySelector("[data-lightbox]");
 const lightboxImage = document.querySelector("[data-lightbox-image]");
 const lightboxCaption = document.querySelector("[data-lightbox-caption]");
 const lightboxClose = document.querySelector("[data-lightbox-close]");
+const floatingEmail = document.querySelector("[data-floating-email]");
+const emailFallback = document.querySelector("[data-email-fallback]");
 let revealItems = document.querySelectorAll(".reveal");
+let emailFallbackTimer;
+const businessEmail = "sathya@prisabiztech.com";
 
 const galleryImages = [
-  ["image1.png", "Healthcare client association"],
-  ["image2.png", "Commercial client association"],
-  ["image3.png", "Technology and commercial client"],
-  ["image4.jpeg", "Partnership document"],
   ["image5.jpeg", "Institution program banner"],
   ["image6.jpeg", "Award and recognition event"],
   ["image7.jpeg", "Recognition ceremony"],
@@ -24,7 +24,6 @@ const galleryImages = [
   ["image11.jpeg", "Classroom training session"],
   ["image12.png", "Group program photograph"],
   ["image13.png", "Institution group session"],
-  ["image14.png", "KSR College invitation"],
   ["image15.png", "Student seminar session"],
   ["image16.png", "Educational program gathering"],
   ["image17.png", "Selvam College lecture series"],
@@ -45,23 +44,22 @@ const galleryImages = [
   ["image32.jpeg", "AVS Engineering College partnership"],
   ["image33.jpeg", "AVS Engineering College MOU"],
   ["image34.png", "Paavai College guest program"],
-  ["image35.jpeg", "Healthcare training program"],
-  ["image36.jpeg", "Doctor training session"],
-  ["image37.jpeg", "Healthcare consultancy meeting"],
-  ["image38.jpeg", "Hospital training discussion"],
-  ["image39.jpeg", "Healthcare team development"],
-  ["image40.jpeg", "Award presentation"],
+  ["image35.jpeg", "Industry cum college MOU"],
+  ["image36.jpeg", "College MOU signing"],
+  ["image37.jpeg", "Board of Studies meeting as per Industry Standards"],
+  ["image38.jpeg", "Board of Studies Review meeting"],
+  ["image39.jpeg", "Board of Studies Team discussion"],
+  ["image40.jpeg", "Government Institutional Award"],
   ["image41.jpeg", "Award news clipping"],
   ["image42.jpeg", "Media coverage"],
   ["image43.jpeg", "Academic event speech"],
-  ["image44.jpeg", "Classroom lecture"],
-  ["image45.jpeg", "Career guidance program"],
+  ["image44.jpeg", "HOSPITAL STAFF TRAINING"],
+  ["image45.jpeg", "Hospital SOPs implementation"],
   ["image46.jpeg", "Founder speaking at event"],
   ["image47.png", "Vivekanandha College program poster"],
   ["image48.jpeg", "Sengunthar College program update"],
-  ["image49.png", "Academic program collage"],
-  ["image50.jpeg", "Institution event collage"],
-  ["image51.png", "VET Institute testimonial letter"],
+  ["image49.png", "Hospital Soft Skill training for quality enhancement"],
+  ["image50.jpeg", "Hospital Front Desk Training"],
   ["image52.jpeg", "Certificate and recognition collage"],
   ["image53.jpeg", "MOU and career guidance update"]
 ];
@@ -111,6 +109,19 @@ const closeLightbox = () => {
   document.body.style.overflow = "";
 };
 
+const showEmailFallback = () => {
+  if (!emailFallback) {
+    return;
+  }
+
+  emailFallback.textContent = `Email us at ${businessEmail}`;
+  emailFallback.hidden = false;
+  clearTimeout(emailFallbackTimer);
+  emailFallbackTimer = window.setTimeout(() => {
+    emailFallback.hidden = true;
+  }, 6000);
+};
+
 const enableImagePreview = () => {
   const previewImages = document.querySelectorAll(".logo-grid img, .gallery-item img, .event-card img");
 
@@ -138,6 +149,9 @@ if (gallery) {
     const figcaption = document.createElement("figcaption");
 
     figure.className = "gallery-item reveal";
+    if (fileName === "image41.jpeg") {
+      image.className = "position-top";
+    }
     image.src = `assets/document/${fileName}`;
     image.alt = caption;
     image.loading = "lazy";
@@ -182,6 +196,23 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && lightbox && !lightbox.hidden) {
     closeLightbox();
   }
+});
+
+floatingEmail?.addEventListener("click", () => {
+  let pageLostFocus = false;
+  const markPageLostFocus = () => {
+    pageLostFocus = true;
+  };
+
+  window.addEventListener("blur", markPageLostFocus, { once: true });
+  document.addEventListener("visibilitychange", markPageLostFocus, { once: true });
+  navigator.clipboard?.writeText(businessEmail).catch(() => {});
+
+  window.setTimeout(() => {
+    if (!pageLostFocus && document.visibilityState === "visible") {
+      showEmailFallback();
+    }
+  }, 900);
 });
 
 form?.addEventListener("submit", (event) => {

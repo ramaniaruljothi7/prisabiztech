@@ -1,0 +1,22 @@
+{
+  "name": "Prisa Biztech Solutions",
+  "short_name": "Prisa Biztech",
+  "description": "Healthcare, education, business consulting, branding, training, and digital growth services.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f8f9",
+  "theme_color": "#07182b",
+  "icons": [
+    {
+      "src": "assets/favicons/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicons/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

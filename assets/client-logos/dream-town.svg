@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title">
+  <title id="title">Dream Town</title>
+  <rect width="320" height="180" fill="#ffffff"/>
+  <path d="M150 38c-17 0-28 14-28 31 0 21 28 39 28 39s28-18 28-39c0-17-11-31-28-31z" fill="#14775d"/>
+  <path d="M144 34c-18 10-32 7-41-5 20-1 33 1 41 5z" fill="#1d9aa8"/>
+  <path d="M156 34c18 10 32 7 41-5-20-1-33 1-41 5z" fill="#63b944"/>
+  <path d="M150 32c-10-12-8-24 1-32 8 10 9 22-1 32z" fill="#63b944"/>
+  <text x="160" y="116" fill="#17365d" font-family="Arial, sans-serif" font-size="42" font-weight="900" text-anchor="middle">DREAM TOWN</text>
+  <line x1="72" y1="129" x2="248" y2="129" stroke="#17365d" stroke-width="3"/>
+  <text x="160" y="151" fill="#17365d" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">PLOTTED DEVELOPMENT</text>
+</svg>
